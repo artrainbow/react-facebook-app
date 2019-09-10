@@ -72,7 +72,6 @@ export default class Feed extends Component {
     }
 
     _likePost = async (id) => {
-
         this._setPostsFetchingState(true);
 
         const response = await fetch(`${api}/${id}`, {
@@ -96,7 +95,7 @@ export default class Feed extends Component {
         this.setState({
             isPostsFetching: state,
         });
-    }
+    };
 
     _fetchPosts = async () => {
         this._setPostsFetchingState(true);
@@ -148,12 +147,12 @@ export default class Feed extends Component {
             posts:           posts.filter((post) => post.id !== id),
             isPostsFetching: false,
         }));
-    }
+    };
 
     _animateComposeEnter = (composer) => { // В качестве аргумента корневой DOM элемент компонента
         // to(composer, 2, {opacity: 0});
         fromTo(composer, 1, { opacity: 0 }, { opacity: 1 });
-    }
+    };
 
     _animationPostmanEnter = (postman) => {
         const Tl = new TimelineMax();
@@ -162,7 +161,7 @@ export default class Feed extends Component {
             .fromTo(postman, 1, { delay: 1, x: 300, ease: Power2.easeOut }, { x: 0, ease: Power2.easeOut })
             .to(postman, 1, { delay: 4, x: 300, ease: Power2.easeOut });
 
-    }
+    };
 
     render () {
         const { posts, isPostsFetching } = this.state;

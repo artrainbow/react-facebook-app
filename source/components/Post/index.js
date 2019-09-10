@@ -36,7 +36,7 @@ export default class Post extends Component {
         return firstName + lastName === currentUserFirstName + currentUserLastName ?
             <span className = { Styles.cross } onClick = { this._handleRemovePost } /> :
             null;
-    }
+    };
 
     render () {
         const {

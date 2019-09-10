@@ -30,6 +30,7 @@ export default class Catcher extends Component {
                 </section>
             );
         }
+
         return this.props.children;
     }
 }

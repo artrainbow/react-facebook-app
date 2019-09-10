@@ -18,7 +18,7 @@ export default class StatusBar extends Component {
 
     state = {
         online: false,
-    }
+    };
 
     componentDidMount () {
         socket.on('connect', () => {
@@ -41,10 +41,9 @@ export default class StatusBar extends Component {
 
     _animateStatusBarEnter = (statusBar) => {
         fromTo(statusBar, 1, { opacity: 0, y: -50 }, { opacity: 1, y: 0 });
-    }
+    };
 
     render () {
-
         const { avatar, currentUserFirstName } = this.props;
         const { online } = this.state;
 

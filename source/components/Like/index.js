@@ -22,23 +22,23 @@ export default class Like extends Component {
                 lastName:  string.isRequired,
             }),
         ).isRequired,
-    }
+    };
 
     state = {
         showLikers: false,
-    }
+    };
 
     _showLikers = () => {
         this.setState({
             showLikers: true,
         });
-    }
+    };
 
     _hideLikers = () => {
         this.setState({
             showLikers: false,
         });
-    }
+    };
 
     _likePost = () => {
         const { _likePost, id } = this.props;
